@@ -9,7 +9,7 @@ export default function CouponClaim() {
         const browserSession = localStorage.getItem("sessionID") || Date.now().toString();
         localStorage.setItem("sessionID", browserSession);
 
-         const response = await axios.post('http://localhost:5000/api/coupons/claim', {
+         const response = await axios.post('https://rrcd.onrender.com/api/coupons/claim', {
              ipAddress, 
              browserSession, 
          });
