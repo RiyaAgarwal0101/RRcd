@@ -22,7 +22,7 @@ const AdminPanel = () => {
 
     const addCoupon = async () => {
         try {
-            await axios.post('http://localhost:5000/api/admin/add', newCoupon);
+            await axios.post('https://rrcd.onrender.com/api/admin/add', newCoupon);
             setMessage('✅ Coupon added successfully!');
             setNewCoupon({ code: '' });
             fetchCoupons();
