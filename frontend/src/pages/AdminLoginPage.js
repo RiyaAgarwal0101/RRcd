@@ -16,7 +16,7 @@ const AdminLoginPage = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+            const response = await axios.post('https://rrcd.onrender.com/api/admin/login', { username, password });
             localStorage.setItem('adminToken', response.data.token);
             setMessage('✅ Login successful! Redirecting...');
             setTimeout(() => navigate('/admin/dashboard'), 1000);
