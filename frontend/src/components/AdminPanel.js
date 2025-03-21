@@ -13,7 +13,7 @@ const AdminPanel = () => {
 
     const fetchCoupons = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/view');
+            const response = await axios.get('https://rrcd.onrender.com/api/admin/view');
             setCoupons(response.data);
         } catch (error) {
             console.error("Error fetching coupons:", error);
